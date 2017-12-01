@@ -24,7 +24,7 @@ class AeronavesController < ApplicationController
   # POST /aeronaves
   # POST /aeronaves.json
   def create
-    @aeronafe = Aeronave.new(aeronafe_params)
+    @aeronafe = Aeronave.new(aeronave_params)
 
     respond_to do |format|
       if @aeronafe.save
@@ -68,7 +68,7 @@ class AeronavesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def aeronafe_params
-      params.require(:aeronafe).permit(:nome, :numerotripulantes, :tamanho, :numero, :chassi, :quantidadehorasvoo, :quantidademotor)
+    def aeronave_params
+      params.require(:aeronave).permit(:nome, :numerotripulantes, :tamanho, :numero, :chassi, :quantidadehorasvoo, :quantidademotor)
     end
 end
